@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/layout_disconnected">
+
+        <ImageView
+            android:contentDescription="No connection"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_network_check"/>
+
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="disconnected"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Baba turn on your data connection,\n Dey whine me"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_connected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/type_text"
+                        style="textAppearanceHeadline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/textMarginStart"
+                        android:layout_marginEnd="@dimen/textMarginEnd"
+                        tools:text="type" />
+
+                    <TextView
+                        android:fontFamily="sans-serif-black"
+                        android:id="@+id/category_text"
+                        style="textAppearanceHeadline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/textMarginStart"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="@dimen/textMarginEnd"
+                        tools:text="category" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/joke_text"
+                    style="textAppearanceHeadline6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/textMarginStart"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_marginEnd="@dimen/textMarginEnd"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    tools:text="Jokes" />
+
+                <TextView
+                    android:id="@+id/setup_text"
+                    style="textAppearanceHeadline6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/textMarginStart"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_marginEnd="@dimen/textMarginEnd"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    tools:text="setup" />
+
+                <TextView
+                    android:id="@+id/delivery_text"
+                    style="textAppearanceHeadline6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/textMarginStart"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_marginEnd="@dimen/textMarginEnd"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    tools:text="Delivery" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fetch_joke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Next Joke"
+                    android:layout_marginBottom="@dimen/marginTop"
+                    app:cornerRadius="5dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</FrameLayout>
