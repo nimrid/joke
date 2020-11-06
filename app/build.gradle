@@ -7,12 +7,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
     defaultConfig {
         applicationId "ng.com.gocheck.joke"
         minSdkVersion 22
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -37,6 +37,10 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
     }
 }
 
@@ -76,5 +80,6 @@ dependencies {
     implementation "org.koin:koin-androidx-scope:2.1.5"
     // or Koin for Android Architecture ViewModel
     implementation "org.koin:koin-androidx-viewmodel:2.1.5"
+
 
 }

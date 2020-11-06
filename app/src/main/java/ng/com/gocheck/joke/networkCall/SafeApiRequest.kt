@@ -1,4 +1,4 @@
-package ng.com.gocheck.jokes.networkCall
+package ng.com.gocheck.joke.networkCall
 
 import retrofit2.Response
 import java.io.IOException

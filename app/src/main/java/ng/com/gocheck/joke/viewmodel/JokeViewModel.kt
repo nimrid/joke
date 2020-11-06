@@ -10,32 +10,13 @@ import ng.com.gocheck.joke.networkCall.Repository
 
 class JokeViewModel (private val repository: Repository) : ViewModel() {
 
+    private lateinit var job : Job
+
     private val _joke = MutableLiveData<Jokes>()
     val joke : LiveData<Jokes>
         get() = _joke
 
-//    private val _jokeString = MutableLiveData<String>()
-//    val jokeString : LiveData<String>
-//        get() = _jokeString
-//
-//    private val _setup = MutableLiveData<String>()
-//    val setup : LiveData<String>
-//        get() = _setup
-//
-//    private val _delivery = MutableLiveData<String>()
-//    val delivery : LiveData<String>
-//        get() = _delivery
-//
-//    private val _category = MutableLiveData<String>()
-//    val category : LiveData<String>
-//        get() = _category
-//
-//    private val _type = MutableLiveData<String>()
-//    val type : LiveData<String>
-//        get() = _type
-
-    private lateinit var job : Job
-
+//    from db
     fun retrieveDb() = repository.retrieveJoke()
 
     fun getJoke() {
